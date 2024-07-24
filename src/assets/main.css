@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+body {
+  background-color: #a6011a;
+}
+
+.container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.saudacao {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+  margin-top: 42px;
+  padding: 10px;
+}
+
+.joias {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.joia {
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  margin-top: 250px;
+}
+
+
+p{
+font-size: 20px;
+margin: 10px;
+}
+
+.imagem {
+  background-color: hsl(0, 0%, 100%);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 130px;
+  padding: 20px;
+  border-radius: 10px;
+}
