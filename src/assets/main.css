@@ -6,6 +6,57 @@
   color: white;
 }
 
+.cabecalho {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  background: radial-gradient(
+    circle,
+    rgba(189, 111, 35, 1) 0%,
+    rgba(166, 1, 26, 1) 36%
+  );
+  justify-content: end;
+}
+
+.rotas {
+  display: flex;
+  gap: 15px;
+}
+
+.home {
+  justify-content: center;
+  align-items: center;
+  word-spacing: 10px;
+}
+
+.icon {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+  padding: 10px;
+  width: 690px;
+}
+
+.icon img {
+  display: flex;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Caveat", cursive;
+  cursor: default;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  margin-top: 15px;
+  font-size: 35px;
+}
+
 body {
   background-color: #a6011a;
 }
@@ -22,27 +73,54 @@ body {
   justify-content: center;
   text-align: center;
   gap: 15px;
-  margin-top: 42px;
+  margin-top: 50px;
   padding: 10px;
 }
 
-.joias {
+.subtitulo {
+  display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 12rem;
+  font-size: 50px;
+}
+
+.joias {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8rem;
   flex-direction: column;
 }
 
 .joia {
+  background-color: rgba(255, 255, 255, 0.025);
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 300px;
-  margin-top: 250px;
+  text-align: center;
+  width: 560px;
+  margin-bottom: 25rem;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.285);
+}
+.home {
+  cursor: pointer;
 }
 
+p {
+  font-size: 20px;
+  margin: 10px;
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  cursor: default;
+}
 
-p{
-font-size: 20px;
-margin: 10px;
+.titulo {
+  font-size: 25px;
+  word-spacing: 3px;
+  margin-bottom: 4rem;
 }
 
 .imagem {
@@ -50,8 +128,288 @@ margin: 10px;
   display: grid;
   align-items: center;
   justify-content: center;
-  width: 150px;
-  height: 130px;
+  width: 300px;
+  height: 250px;
+  padding: 30px;
+  border-radius: 15px;
+  transition: width 0.4s ease, height 0.4s ease;
+  cursor: pointer;
+}
+.imagem:hover {
+  width: 350px;
+  height: 300px;
+}
+
+.imagem img {
+  width: 300px;
+  height: 250px;
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.imagem img:hover {
+  width: 350px;
+  height: 300px;
+}
+
+.valor {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.divbuy {
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  background-color: rgba(255, 255, 255, 0.442);
+  border-radius: 15px;
+  width: 8rem;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.comprar {
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.descricao {
   padding: 20px;
-  border-radius: 10px;
+  word-spacing: 4px;
+  border: 1px solid white;
+  margin-top: 20px;
+  transition: font-size 0.3s ease;
+  width: 490px;
+  background-color: #a6011a6d;
+}
+
+.descricao:hover {
+  font-size: 22px;
+}
+
+.avaliacao {
+  margin-top: 20px;
+}
+
+/* **** BANNERS **** */
+
+section.slider {
+  margin-top: 6rem;
+  margin: o auto;
+  width: 100%;
+  height: auto;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.slider-content {
+  width: 400%;
+  height: auto;
+  display: flex;
+}
+
+.slider-content input,
+.img-mobile {
+  display: none;
+}
+
+.slider-box {
+  width: 25%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  transition: 1s;
+}
+
+.slider-box img {
+  width: 100%;
+}
+
+.nav-manual,
+.nav-auto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  margin-top: 50rem;
+}
+
+.manual-btn,
+.nav-auto div {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 6px;
+  transition: 0.3s;
+}
+.manual-btn:hover {
+  background-color: white;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1 {
+  background: white;
+}
+
+#radio2:checked ~ .nav-auto .auto-btn2 {
+  background: white;
+}
+
+#radio3:checked ~ .nav-auto .auto-btn3 {
+  background: white;
+}
+
+#radio1:checked ~ .primeiro {
+  margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro {
+  margin-left: -50%;
+}
+
+/* ****** MEDIA QUERIES ***** */
+
+@media screen and (max-width: 1200px) {
+  .cabecalho {
+    height: 70px;
+  }
+
+  .icon {
+    width: 500px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .descricao {
+    width: 400px;
+  }
+
+  .nav-auto,
+  .nav-manual {
+    margin-top: 40rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cabecalho {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+  }
+
+  .rotas {
+    justify-content: center;
+  }
+
+  .icon {
+    width: auto;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  .icon img {
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  .descricao {
+    width: 300px;
+  }
+
+  .nav-auto,
+  .nav-manual {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .rotas {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .icon img {
+    width: 80px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .descricao {
+    width: 250px;
+  }
+
+  .nav-auto,
+  .nav-manual {
+    margin-top: 20rem;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cabecalho {
+    padding: 5px;
+  }
+
+  .icon img {
+    width: 60px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .descricao {
+    width: 200px;
+  }
+
+  .nav-auto,
+  .nav-manual {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .img-desktop {
+    display: none;
+  }
+  .img-mobile {
+    display: block;
+  }
+  .nav-auto,
+  .nav-manual {
+    display: none;
+  }
 }
