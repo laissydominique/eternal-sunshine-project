@@ -35,9 +35,30 @@ function proximaImg() {
   }
 }
 
+function getEfeitos() {
+  window.revelar = ScrollReveal({ reset: true });
+
+  revelar.reveal(".efeito-topo", {
+    duration: 2000,
+    distance: '90px',
+  });
+
+
+  revelar.reveal(".efeito-subtitulo", {
+    duration: 2000,
+    distance: '90px',
+  });
+
+  revelar.reveal(".efeito-produtos", {
+    duration: 2000,
+    distance: '90px',
+  });
+}
+
 onMounted(() => {
   getJoias();
   proximaImg();
+  getEfeitos();
 });
 </script>
 
@@ -50,10 +71,8 @@ onMounted(() => {
         </div>
       </div>
     </header>
-    <div class="saudacao">
-      <h1>
-        Eternal Sunshine Jewelry
-      </h1>
+    <div class="saudacao efeito-topo">
+      <h1>Eternal Sunshine Jewelry</h1>
       <h2>Make it shine</h2>
     </div>
 
@@ -146,12 +165,12 @@ onMounted(() => {
       </div>
     </section>
 
-    <div class="subtitulo">
+    <div class="subtitulo efeito-subtitulo">
       <h3>Our products</h3>
     </div>
 
-    <div class="joias">
-      <div class="joia" v-for="joia in info.itens" :key="joia.titulo">
+    <div class="joias ">
+      <div class="joia " v-for="joia in info.itens" :key="joia.titulo">
         <p class="titulo">{{ joia.titulo }}</p>
         <div class="imagem">
           <img

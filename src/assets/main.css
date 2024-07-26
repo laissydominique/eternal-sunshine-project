@@ -381,3 +381,8 @@ section.slider {
     display: none;
   }
 }
+
+
+.efeito-topo, .efeito-subtitulo, .efeito-produtos{
+  visibility: hidden;
+}
