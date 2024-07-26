@@ -48,13 +48,12 @@ onMounted(() => {
         <div class="rotas">
           <p class="home">Store ✦ Home ✦ About Us</p>
         </div>
-        <div class="icon">
-          <img src="./img/icon2.png" alt="" width="120px" />
-        </div>
       </div>
     </header>
     <div class="saudacao">
-      <h1>Eternal Sunshine Jewelry</h1>
+      <h1>
+        Eternal Sunshine Jewelry
+      </h1>
       <h2>Make it shine</h2>
     </div>
 
